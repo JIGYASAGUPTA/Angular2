@@ -1,0 +1,24 @@
+<app-header></app-header>
+
+
+<input type="text"  [ngModel]="name" (ngModelChange)="ModelChangedValue($event)">
+      {{name}}
+
+      <button class="btn btn-primary" (click)="Click()">Click</button>
+
+
+
+
+  <li *ngFor="let obj of new">
+  <div *ngIf="obj.userId == 1; then thenBlock else elseBlock"></div>
+<ng-template #thenBlock> {{obj.userid}}</ng-template>
+<ng-template #elseBlock>{{obj.title}}</ng-template>
+  
+   
+
+   
+</li>
+
+
+  
+    
